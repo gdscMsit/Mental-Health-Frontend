@@ -36,6 +36,7 @@ export class LogInComponent {
       })
       .subscribe((result) => {
         this.res = result;
+        console.log(result);
         if(this.res.status == "true"){
           localStorage.setItem('login_status','true');
           localStorage.setItem('user_id',this.res.id);
